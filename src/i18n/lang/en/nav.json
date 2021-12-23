@@ -1,0 +1,10 @@
+{
+  "dashboard": "Dashboard",
+  "user": "User",
+  "user_list": "User List",
+  "trend": "Trend Report",
+  "trend_colon": "Trend: {{id}}",
+  "serial": "Serial",
+  "serial_list": "Serial List",
+  "order_list": "Serial Order"
+}

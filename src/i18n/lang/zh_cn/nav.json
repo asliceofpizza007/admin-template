@@ -1,0 +1,11 @@
+{
+  "dashboard": "首頁",
+  "user": "用户相关",
+  "user_list": "使用者列表",
+  "trend": "趋势报告",
+  "trend_colon": "趋势: {{id}}",
+  "serial": "序号相关",
+  "serial_colon": "序号: {{id}}",
+  "serial_list": "序号列表",
+  "order_list": "序号订单"
+}
