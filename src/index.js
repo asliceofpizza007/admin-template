@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { AliveScope } from 'react-activation'
+import { ThemeProvider } from 'styled-components';
+import store from '@redux/store'
+import { App } from '@containers';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+// i18n
+import '@/i18n'
+
+// global theme
+import '@scss/reset.scss'
+import '@scss/global.scss'
+
+// styled theme
+import theme from '@styled/theme'
+
+render(
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <AliveScope>
+          <App />
+        </AliveScope>
+      </BrowserRouter>
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
