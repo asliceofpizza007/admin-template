@@ -46,12 +46,12 @@ module.exports = {
   plugins: [
     {
       plugin: sassResourcesLoader,
-      options: {
-        resources: [
-          './src/assets/scss/_variables.scss',
-          './src/assets/scss/_mixins.scss',
-        ],
-      },
+      // options: {
+      //   resources: [
+      //     './src/assets/scss/_variables.scss',
+      //     './src/assets/scss/_mixins.scss',
+      //   ],
+      // },
     },
   ]
 }
