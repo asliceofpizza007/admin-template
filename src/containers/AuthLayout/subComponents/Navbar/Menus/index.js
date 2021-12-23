@@ -126,7 +126,6 @@ const Menus = () => {
   const items = useMemo(() => {
     return generateNav(mergedNavigation)
   }, [t, mergedNavigation])
-
   const [selectedKeys, setSelectedKeys] = useState()
   const [openKeys, setOpenKeys] = useState()
   const createHash = useCallback((list = [], hash = {}, keys = []) => {
@@ -166,6 +165,8 @@ const Menus = () => {
     return createHash(mergedNavigation)
   }, [mergedNavigation])
   useLayoutEffect(() => {
+    let openKey = []
+    let selectKey = 'dashboard'
     Object.keys(hash).forEach(key => {
       const {
         openKeyPath,
@@ -173,16 +174,17 @@ const Menus = () => {
       } = hash[key]
       const matches = matchRoutes(routeObjects, location)
       if(matches) {
-        setOpenKeys(openKeyPath)
-        setSelectedKeys(key)
+        openKey = openKeyPath
+        selectKey = key
       }
     })
-    const match = matchRoutes([{ path: '/auth'}], location)
-    if(match) {
-      setOpenKeys([])
-      setSelectedKeys('dashboard')
+
+    // disabled set open keys when menu is collapsed.
+    if(!isNavCollapsed) {
+      setOpenKeys(openKey)
     }
-  }, [location])
+    setSelectedKeys(selectKey)
+  }, [location, isNavCollapsed, isMobile])
 
   const handleOnNavClick = useCallback(({key}) => {
     const path = `/auth${key === 'dashboard' ? '' : key}`
