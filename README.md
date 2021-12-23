@@ -41,23 +41,23 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Router Structure
 
--|- /login
- |- /authLayout |- /dashboard
-                |- ** whatever your view is **
- |- /errorPage |- index
-               |- ** custom error page **
+-|- /login\
+ |- /authLayout |- /dashboard\
+                |- ** whatever your view is **\
+ |- /errorPage |- index\
+               |- ** custom error page **\
 
 ## Layout Structure
 
-|¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
-|   |         header        |
-|   |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
-|nav|         tabs          |
-|   |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|
-|   |                       |
-|   |         Main          |
-|   |                       |
-|   |                       |
-|   |                       |
-|   |                       |
- ¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+|¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\
+|   |         header        |\
+|   |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\
+|nav|         tabs          |\
+|   |¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\
+|   |                       |\
+|   |         Main          |\
+|   |                       |\
+|   |                       |\
+|   |                       |\
+|   |                       |\
+ ¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
