@@ -43,15 +43,15 @@ module.exports = {
       // new BundleAnalyzerPlugin()
     ].filter(Boolean),
   },
-  plugins: [
-    {
-      plugin: sassResourcesLoader,
-      // options: {
-      //   resources: [
-      //     './src/assets/scss/_variables.scss',
-      //     './src/assets/scss/_mixins.scss',
-      //   ],
-      // },
-    },
-  ]
+  // plugins: [
+  //   {
+  //     plugin: sassResourcesLoader,
+  //     options: {
+  //       resources: [
+  //         './src/assets/scss/_variables.scss',
+  //         './src/assets/scss/_mixins.scss',
+  //       ],
+  //     },
+  //   },
+  // ]
 }
