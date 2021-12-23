@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'aidmics';
+  src:  url('fonts/aidmics.eot?qy2xpu');
+  src:  url('fonts/aidmics.eot?qy2xpu#iefix') format('embedded-opentype'),
+    url('fonts/aidmics.ttf?qy2xpu') format('truetype'),
+    url('fonts/aidmics.woff?qy2xpu') format('woff'),
+    url('fonts/aidmics.svg?qy2xpu#aidmics') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="aidmics-"], [class*=" aidmics-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'aidmics' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.aidmics-cross:before {
+  content: "\e90c";
+}
+.aidmics-warning:before {
+  content: "\e90b";
+}
+.aidmics-layer:before {
+  content: "\e90a";
+}
+.aidmics-check-mark:before {
+  content: "\e900";
+}
+.aidmics-user:before {
+  content: "\e909";
+}
+.aidmics-users:before {
+  content: "\e901";
+}
+.aidmics-home:before {
+  content: "\e902";
+}
+.aidmics-collapsed-left:before {
+  content: "\e903";
+}
+.aidmics-collapsed-right:before {
+  content: "\e904";
+}
+.aidmics-list:before {
+  content: "\e905";
+}
+.aidmics-bell:before {
+  content: "\e906";
+}
+.aidmics-translate:before {
+  content: "\e907";
+}
+.aidmics-logout:before {
+  content: "\e908";
+}
