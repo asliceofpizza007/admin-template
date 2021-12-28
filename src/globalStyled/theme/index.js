@@ -15,7 +15,11 @@ const theme = {
   },
   padding: {
     content_padding: '1rem',
-  }
+  },
+  break_points: {
+    tablet: '768px',
+    desktop: '1024px',
+  },
 }
 
 export default theme

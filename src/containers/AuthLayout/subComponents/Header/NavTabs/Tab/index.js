@@ -17,12 +17,17 @@ const TabNode = styled.div`
   background-color: ${props => props.active ? props.theme.color.primary : '#fff'};
   color: ${props => props.active ? '#fff' : props.theme.color.primary};
   padding: 5px 1rem;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, opacity 0.3s ease-out;
   cursor: pointer;
   & + & {
     margin-left: 10px;
   }
   > span {
     font-weight: bold;
+  }
+  &:hover {
+    background-color: ${props => props.theme.color.primary};
+    color: #fff;
   }
 `
 const Close = styled(FontIcon)`
@@ -67,7 +72,7 @@ const Tab = (props) => {
       onClick={handleNavigate}
     >
       <span>
-        { t(key, options)}
+        { t(key, options) }
       </span>
       {
         path && !match &&

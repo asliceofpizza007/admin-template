@@ -26,7 +26,7 @@ body,
 
 .route-enter-active,
 .route-exit-active {
-  transition: all 0.5s;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .route-exit,
 .route-exit-active {
@@ -34,17 +34,10 @@ body,
   top: 0;
 }
 
-.tab-enter {
+.tab-enter,
+.tab-exit-active {
   opacity: 0;
 }
 .tab-enter-active {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
-}
-.tab-exit {
-  opacity: 1;
-}
-.tab-exit-active {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
 }

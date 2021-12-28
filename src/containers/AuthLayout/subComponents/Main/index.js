@@ -7,7 +7,7 @@ import {
 
 const MainLayout = styled.main`
   position: relative;
-  min-height: calc(200vh - ${props => props.theme.rect.header_height});
+  min-height: calc(100vh - ${props => props.theme.rect.header_height});
 `
 
 const Main = (props) => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const MainContent = styled.div`
+const MainContent = styled.section`
   padding: 1.2rem 1rem;
 `
 
