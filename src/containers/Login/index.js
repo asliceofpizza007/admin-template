@@ -3,12 +3,16 @@ import {
   Form,
   Input,
   Button,
+  Dropdown,
 } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { useAxios } from '@hooks'
 import { getFormData } from '@utils'
+import { LanguageSwitch } from '@components'
+import { FontIcon } from '@styled/styledComponents'
+import logo from '@images/logo.png'
 
 const { Item }  = Form
 const { Password } = Input
@@ -23,16 +27,34 @@ const LoginContainer = styled.div`
 `
 
 const LoginForm = styled(Form)`
-  width: 500px;
-  height: 240px;
-  padding: 2rem 1rem;
+  width: 620px;
+  padding: 3rem 1.5rem;
   background-color: #fff;
+  border-radius: 4px;
+  @media (max-width: ${props => props.theme.break_points.tablet}) {
+    width: 80vw;
+  }
+`
+
+const ImageBlock = styled.div`
+  padding-bottom: 3rem;
+  > img {
+    filter: drop-shadow(2px 4px 3px ${props => props.theme.color.primary});
+  }
+`
+
+const Translate = styled(FontIcon)`
+  display: inline-block;
+  margin-left: 20px;
+  transform: translateY(5px);
+  cursor: pointer;
 `
 
 const Login = () => {
   const location = useLocation()
   const navigate = useNavigate()
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation('common')
+  const { language } = i18n
   const {
     request: login,
     isLoading,
@@ -48,9 +70,9 @@ const Login = () => {
     try {
       const data = getFormData({
         ...values,
-        species: 'SW',
+        species: 'WW',
         device_id: 'browser',
-        locale: i18n.language,
+        locale: language,
       })
       await login({ data })
     } catch(error) {
@@ -63,12 +85,15 @@ const Login = () => {
       <LoginForm
         name="login"
         labelCol={{
-          span: 5,
+          span: language === 'en' ? 5 : 3,
         }}
         onFinish={onFinish}
       >
+        <ImageBlock>
+          <img src={logo} alt="logo" />
+        </ImageBlock>
         <Item
-          label="Account"
+          label={t('account')}
           name="account"
           rules={[
             {
@@ -84,7 +109,7 @@ const Login = () => {
           <Input placeholder="account@email.com" />
         </Item>
         <Item
-          label="Password"
+          label={t('password')}
           name="password"
           rules={[
             {
@@ -97,7 +122,7 @@ const Login = () => {
         </Item>
         <Item
           wrapperCol={{
-            offset: 5,
+            offset: language === 'en' ? 5 : 3,
           }}
         >
           <Button
@@ -105,8 +130,17 @@ const Login = () => {
             htmlType="submit"
             loading={isLoading}
           >
-            Submit
+            { t('login') }
           </Button>
+          <Dropdown
+            overlay={<LanguageSwitch />}
+          >
+            <Translate
+              className="aidmics-translate"
+              size={24}
+              color={'#999'}
+            />
+          </Dropdown>
         </Item>
       </LoginForm>
     </LoginContainer>
