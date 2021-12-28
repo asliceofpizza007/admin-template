@@ -5,7 +5,7 @@ import {
 } from "react-redux";
 import { toggleNav } from '@redux/modules/layouts'
 import { Scrollbar } from '@components'
-import logo from '@images/logo.png'
+import logo from '@images/logo-icon.png'
 import Menus from './Menus'
 
 
@@ -43,7 +43,7 @@ const Logo = styled.div`
   color: rgba(255, 255, 255, 0.85);
   font-size: 24px;
   > img {
-    width: 40px;
+    width: 25px;
     margin: unset;
   }
   p {
