@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'aidmics';
-  src:  url('fonts/aidmics.eot?qy2xpu');
-  src:  url('fonts/aidmics.eot?qy2xpu#iefix') format('embedded-opentype'),
-    url('fonts/aidmics.ttf?qy2xpu') format('truetype'),
-    url('fonts/aidmics.woff?qy2xpu') format('woff'),
-    url('fonts/aidmics.svg?qy2xpu#aidmics') format('svg');
+  src:  url('fonts/aidmics.eot?mbtdbe');
+  src:  url('fonts/aidmics.eot?mbtdbe#iefix') format('embedded-opentype'),
+    url('fonts/aidmics.ttf?mbtdbe') format('truetype'),
+    url('fonts/aidmics.woff?mbtdbe') format('woff'),
+    url('fonts/aidmics.svg?mbtdbe#aidmics') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.aidmics-cross:before {
-  content: "\e90c";
+.aidmics-translate:before {
+  content: "\e907";
 }
 .aidmics-warning:before {
   content: "\e90b";
@@ -58,9 +58,9 @@
 .aidmics-bell:before {
   content: "\e906";
 }
-.aidmics-translate:before {
-  content: "\e907";
-}
 .aidmics-logout:before {
   content: "\e908";
+}
+.aidmics-cross:before {
+  content: "\e90c";
 }
