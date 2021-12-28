@@ -17,7 +17,7 @@ const useAxios = (url, configs, responseCallback) => {
   const request = useCallback(async ({
     data,
     params,
-  }) => {
+  } = {}) => {
     setIsLoading(true)
     try {
       const res = await axios({
@@ -37,7 +37,7 @@ const useAxios = (url, configs, responseCallback) => {
     } finally {
       setIsLoading(false)
     }
-  }, [resp, isLoading, error])
+  }, [isLoading])
 
   useEffect(() => {
     return () => {
