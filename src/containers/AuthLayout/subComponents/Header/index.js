@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom"
 import { useAliveController } from 'react-activation'
 import { toggleNav } from "@redux/modules/layouts"
+import { setRole } from "@redux/modules/account"
 import { FontIcon } from "@styled/styledComponents"
 import { LanguageSwitch } from '@components'
 import { useAxios } from '@hooks'
@@ -46,7 +47,7 @@ const InfoContent = styled.ul`
     align-items: center;
     cursor: pointer;
     & + li {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 `
@@ -69,10 +70,11 @@ const Header = (props) => {
   })
   const handleLogout = useCallback(async () => {
     try {
-      await logout({})
+      await logout()
       localStorage.clear()
       clear()
       navigate('/login')
+      dispatch(setRole(null))
     } catch(err) {
       console.error(err)
     }
